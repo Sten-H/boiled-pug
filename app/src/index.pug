@@ -1,0 +1,33 @@
+extends ./templates/layout.pug
+
+block title 
+  | Pug Boiler
+
+block body
+  .row.center-content
+    .one-half.column
+      header
+        h1 Pug Boilerplate (of dreams)
+        hr
+        p.lead It's so dreamy
+      span Dreamy dreams:
+      ul.dream-list
+        li .pug -> html
+        li sass/scss -> css
+        li Bundles js to single file (can use import/export for module)
+        li Automatic browser refresh on file change (browserSync)
+      span Dreamy todo:
+      ul.dream-list
+        li Gulp tasks don't return done, will create issues if building async?
+        li Ulgify/Minify/and so on
+        li resources folder is just copied on build (+ watch) right now.
+        li Setting up npm test to do something would be nice
+      span Dreams not yet dreamed of:
+      ul.dream-list
+        li Wouldn't it be nice if for dev mode ('gulp serve' I guess) it made two bundles one for external modules and one for imported modules. Wouldn't js build much faster on average?
+      Span Opposite dreams (nightmares!?!):
+      ul
+        li Changing a folder name will crash browsersync server (someone will be trying to watch a folder that no longer exists)
+
+block scripts
+  script(src="build.js")
